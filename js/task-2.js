@@ -1,4 +1,9 @@
 function calcAverageCalories(days) {
+    // Якщо список порожній, повертаємо 0
+    if (days.length === 0) {
+        return 0;
+    }
+
     // Підсумовуємо всі калорії з кожного дня
     const totalCalories = days.reduce((sum, day) => sum + day.calories, 0);
     
@@ -7,7 +12,6 @@ function calcAverageCalories(days) {
     
     return averageCalories;
 }
-
 
 console.log(
   calcAverageCalories([
